@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src",
     "build": "rm -rf ./build && tsc",
     "start": "npm run build && node build/index.js",
     "dev": "nodemon",
