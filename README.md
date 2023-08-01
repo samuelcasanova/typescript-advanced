@@ -63,7 +63,7 @@ You just need git and node installed in your computer to use this template
    ```
 5. Run linter
    ```sh
-   npm lint
+   npm run lint
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
