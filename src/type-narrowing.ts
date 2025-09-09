@@ -31,3 +31,23 @@ export function narrowingByClassProperty(step: VideoStep | QuizStep) {
 
   return step.questions.length * 3;
 }
+
+export function narrowingByInstanceType(step: VideoStep | QuizStep) {
+  if (step instanceof VideoStep) {
+    return step.durationInMillis / 1000 / 60;
+  }
+
+  return step.questions.length * 3;
+}
+
+export function narrowingByTypePredicate(step: VideoStep | QuizStep) {
+  if (isVideoStep(step)) {
+    return step.durationInMillis / 1000 / 60;
+  }
+
+  return step.questions.length * 3;
+}
+
+function isVideoStep(step: unknown): step is VideoStep {
+  return step instanceof VideoStep
+}
